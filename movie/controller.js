@@ -1,7 +1,9 @@
-import { getAll } from "./model.js";
+import { getAll } from './model.js';
+import { render } from './view.js';
 
 
 export async function listAction(request, response) {
     const data = await getAll();
-    response.send(data);
+    const body = render(data);
+    response.send(body);
 }

@@ -1,14 +1,10 @@
 import express from 'express';
+import morgan from 'morgan';
 import { router as movieRouter } from './movie/index.js';
 
 const app = express();
 
-function log(request, response, next) {
-    console.log(request.url);
-    next();
-}
-
-app.use(log);
+app.use(morgan(':date :method :url :status', { immediate: true}));
 
 app.use('/movie', movieRouter);
 

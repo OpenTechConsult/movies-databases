@@ -5,6 +5,7 @@ export function render(movies) {
         <head>
             <meta charset="UTF-8">
             <title>Movie list</title>
+            <link rel="stylesheet" href="style.css"/>
         </head>
         <body>
             <table>

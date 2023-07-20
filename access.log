@@ -1,2 +1,6 @@
 Thu, 20 Jul 2023 01:54:26 GMT GET /movie -
 Thu, 20 Jul 2023 01:54:29 GMT GET /movie -
+Thu, 20 Jul 2023 09:07:05 GMT GET / -
+Thu, 20 Jul 2023 09:07:05 GMT GET /movie -
+Thu, 20 Jul 2023 09:10:35 GMT GET / -
+Thu, 20 Jul 2023 09:10:35 GMT GET /movie -

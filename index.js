@@ -1,14 +1,16 @@
 import express from 'express';
 import morgan from 'morgan';
-import { createWriteStream } from 'fs';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 import { router as movieRouter } from './movie/index.js';
 
 const app = express();
 
-const accessLogStream = createWriteStream('access.log', { flags: 'a'});
+app.use(express.static(`${dirname(fileURLToPath(import.meta.url))}/public`));
+
+
 app.use(morgan(':date :method :url :status', { 
     immediate: true,
-    stream: accessLogStream
 }));
 
 app.use('/movie', movieRouter);

@@ -8,6 +8,10 @@ export function getAll() {
     return Promise.resolve(data);
 }
 
+export function get(id) {
+    return Promise.resolve(data.find((movie) => movie.id === id));
+}
+
 export function remove(id) {
     data = data.filter(movie => movie.id !== id);
     return Promise.resolve();
